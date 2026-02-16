@@ -1,5 +1,16 @@
---performance analysis
---comparing the current value with the target value
+/*Performance Analysis (Year-over-Year, Month-over-Month)
+--------------------------------------------------------------------------------
+Purpose:
+    - To measure the performance of products, customers, or regions over time.
+    - For benchmarking and identifying high-performing entities.
+    - To track yearly trends and growth.
+
+SQL Functions Used:
+    - LAG(): Accesses data from previous rows.
+    - AVG() OVER(): Computes average values within partitions.
+    - CASE: Defines conditional logic for trend analysis.
+---------------------------------------------------------------------------------
+*/
 
 /*yearly performance of products by comparing each 
 product sales to both avg sales and prev years sales*/
@@ -38,4 +49,5 @@ SELECT
 
 FROM yearly_product_sales
 order by product_name,order_year;
+
 
